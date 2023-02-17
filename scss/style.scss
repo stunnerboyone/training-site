@@ -1,0 +1,104 @@
+@import 'vars';
+@import 'fonts';
+
+html{
+    box-sizing: border-box;
+}
+
+*,*::after,*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 0 20px;
+    @media (min-width: 640px) {
+        padding: 0 30px;
+    }
+
+    @media (min-width: 768px) {
+        padding: 0 40px;
+    }
+
+    @media (min-width: 1024px) {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    @media (min-width: 1440px) {
+        max-width: 1320px; 
+    }
+}
+
+.header {
+    background-color: $accent;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    @media (min-width: 640px) {
+        min-width: 100px;
+    }
+}
+
+.logo__link {
+    margin-left: 8px;
+    @media (min-width: 640px) {
+        margin-left: 14px;
+    }
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.menu__button {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: $white;
+    border: 1px solid $white;
+    position: relative;
+    &::after {
+        content: "";
+        width: 12px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $accent;
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
+    }
+    @media (min-width: 1440px) {
+        margin-right: 90px;
+    }
+}
+
+.head {
+    background-image: url(../ui/Earth.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 193px;
+}
+
+.top-slider {
+    background: rgba(33, 33, 33, 0.5);
+}
+
+.top-slider__item {
+    
+}
+
+.top-slider__title {
+    color: $white;
+}

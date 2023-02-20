@@ -89,6 +89,14 @@ body {
     background-position: center center;
     background-size: cover;
     min-height: 193px;
+    @media (min-width: 640px) {
+        min-height: 386px;
+        background-position: center center;
+    }
+
+    @media (min-width: 768) {
+
+    }
 }
 
 .top-slider {
@@ -96,9 +104,130 @@ body {
 }
 
 .top-slider__item {
-    
+    min-height: 193px;
+    text-align: center;
+    @media (min-width: 640px) {
+        min-height: 386px;
+    }
+    @media (min-width: 768px) {
+        min-height: 465px;
+    }
 }
 
 .top-slider__title {
+    position: relative;
+    margin: 0 auto;
+    padding: 36px 0 28px;
+    max-width: 243px;
+    font-family: 'RobotoCondensed-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    text-transform: uppercase;
+    line-height: 28px;
     color: $white;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 61px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $textMain;
+    }
+    @media (min-width: 640px) {
+        padding: 50px 0 15px;
+        margin: 0 auto 30px;
+        max-width: 520px;
+        font-size: 60px;
+        line-height: 60px;
+    }
+    @media (min-width: 768px) {
+        padding: 87px 0 0;
+        margin: 0 auto;
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.top-slider__text {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+        padding: 25px 0 32px;
+        margin: 0 auto;
+        max-width: 587px;
+        font-family: 'RobotoCondensed-Regular';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        color: $white;
+    }
+    
+}
+
+.top-slider__button {
+    display: none;
+    @media(min-width: 640px) {
+        display: block;
+        margin: 0 auto 113px;
+        padding: 16px 45px;
+        border: 1px solid $accent;
+        border-radius: 3px;
+        font-family: 'Roboto-Regular';
+        font-size: 18px;
+        line-height: 18px;
+        background-color: $accent;
+        color: $buttonColor;
+    }
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    .slick-active{
+        button{
+            background-color: transparent;
+            border: 1px solid #476e4d;
+        }
+    }
+    button {
+        padding: 0;
+        margin: 0 10px;
+        width: 10px;
+        height: 10px;
+        font-size: 0;
+        background-color: $accent;
+        border-radius: 50%;
+        border: 1px solid $accent;
+    }
+    @media(min-width: 640px) {
+        bottom: 50px;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: none;
+    right: 0;
+    z-index: 5;
+}
+
+.slick-prev {
+    background-color: $accent;
+    top: calc(50% - 56px)
+}
+
+.slick-next {
+    background-color: $buttonColor;
+    bottom: calc(50% - 56px)
 }

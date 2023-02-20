@@ -28,7 +28,8 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
-nav ul {
+ul,
+li {
     list-style:none;
 }
 
@@ -91,4 +92,8 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+button {
+    padding: 0;
 }

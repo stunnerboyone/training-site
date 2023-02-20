@@ -6,6 +6,13 @@
 }
 
 @font-face {
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: normal;
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'), url('../fonts/Roboto-Regular.woff') format('woff');
+}
+
+@font-face {
     font-family: 'RobotoCondensed-Bold';
     font-weight: 700;
     font-size: normal;

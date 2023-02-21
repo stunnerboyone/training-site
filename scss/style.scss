@@ -1,5 +1,5 @@
 @import 'vars';
-@import 'fonts';
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;500&display=swap');
 
 html{
     box-sizing: border-box;
@@ -93,10 +93,6 @@ body {
         min-height: 386px;
         background-position: center center;
     }
-
-    @media (min-width: 768) {
-
-    }
 }
 
 .top-slider {
@@ -112,6 +108,12 @@ body {
     @media (min-width: 768px) {
         min-height: 465px;
     }
+    @media (min-width: 1024px) {
+        min-height: 618px;
+    }
+    @media (min-width: 1440px) {
+        min-width: 668px;
+    }
 }
 
 .top-slider__title {
@@ -119,12 +121,12 @@ body {
     margin: 0 auto;
     padding: 36px 0 28px;
     max-width: 243px;
-    font-family: 'RobotoCondensed-Regular';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    text-transform: uppercase;
     line-height: 28px;
+    text-transform: uppercase;
     color: $white;
     &::after {
         content: "";
@@ -151,6 +153,20 @@ body {
             display: none;
         }
     }
+    @media (min-width: 1024px) {
+        max-width: 750px;
+        padding-top: 101px;
+        font-size: 84px;
+        line-height: 84px;
+        letter-spacing: 2px;
+        
+    }
+    @media (min-width: 1440px) {
+        max-width: 860px;
+        padding-top: 107px;
+        font-size: 96px;
+        line-height: 96px;
+    }
 }
 
 .top-slider__text {
@@ -160,13 +176,18 @@ body {
         padding: 25px 0 32px;
         margin: 0 auto;
         max-width: 587px;
-        font-family: 'RobotoCondensed-Regular';
-        font-weight: 500;
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 400;
         font-size: 18px;
         line-height: 20px;
         color: $white;
     }
-    
+    @media (min-width: 1440px) {
+        min-width: 890px;
+        font-size: 24px;
+        line-height: 26px;
+    }
 }
 
 .top-slider__button {
@@ -177,7 +198,9 @@ body {
         padding: 16px 45px;
         border: 1px solid $accent;
         border-radius: 3px;
-        font-family: 'Roboto-Regular';
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
         font-size: 18px;
         line-height: 18px;
         background-color: $accent;
@@ -211,6 +234,9 @@ body {
     @media(min-width: 640px) {
         bottom: 50px;
     }
+    @media (min-width: 1024px) {
+        bottom: 80px;
+    }
 }
 
 .slick-arrow {
@@ -220,14 +246,100 @@ body {
     border: none;
     right: 0;
     z-index: 5;
+    cursor: pointer;
+    @media(min-width: 1440px) {
+        width: 70px;
+        height: 70px;
+    }
 }
 
 .slick-prev {
     background-color: $accent;
-    top: calc(50% - 56px)
+    top: calc(50% - 56px);
+    @media(min-width: 1440px) {
+        top: calc(50% - 70px)
+    }
 }
 
 .slick-next {
     background-color: $buttonColor;
-    bottom: calc(50% - 56px)
+    bottom: calc(50% - 56px);
+    @media(min-width: 1440px) {
+        bottom: calc(50% - 70px)
+    }
+}
+
+.call {
+    background-color: $accent;
+    padding: 40px 0;
+    color: $white;
+    text-align: center;
+    @media (min-width: 768px) {
+        padding: 40px 44px;
+    }
+    @media (min-width: 1440px) {
+        padding: 57px 150px;
+    }
+}
+
+.call__inner {
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.call__content {
+    margin: 0 auto;
+    max-width: 280px;
+    @media (min-width: 640px) {
+        max-width: 580px;
+    }
+    @media (min-width: 768px) {
+        margin: 0;
+        max-width: 425px;
+        text-align: left;
+    }
+}
+
+.call__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0 auto 15px;
+    @media (min-width: 768px) {
+        margin: 0 0 10px;
+    }
+    @media (min-width: 1024px) {
+        line-height: 32px;
+    }
+}
+
+.call__text {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 auto 40px;
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+}
+
+.call__button {
+    padding: 16px 15px;
+    background-color: $white;
+    color: $accent;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    border: 1px solid $white;
+    border-radius: 3px;
+    text-transform: uppercase;
 }

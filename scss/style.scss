@@ -121,9 +121,7 @@ body {
     margin: 0 auto;
     padding: 36px 0 28px;
     max-width: 243px;
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 400;
+    @extend %roboto-condenced-400;
     font-size: 28px;
     line-height: 28px;
     text-transform: uppercase;
@@ -192,15 +190,13 @@ body {
 
 .top-slider__button {
     display: none;
+    @extend %roboto-500;
     @media(min-width: 640px) {
         display: block;
         margin: 0 auto 113px;
         padding: 16px 45px;
         border: 1px solid $accent;
         border-radius: 3px;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
         font-size: 18px;
         line-height: 18px;
         background-color: $accent;
@@ -304,9 +300,7 @@ body {
 }
 
 .call__title {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
+    @extend %roboto-500;
     font-size: 24px;
     line-height: 24px;
     margin: 0 auto 15px;
@@ -319,9 +313,7 @@ body {
 }
 
 .call__text {
-    font-family: 'Dosis';
-    font-style: normal;
-    font-weight: 300;
+    @extend %dosis-300;
     font-size: 16px;
     line-height: 18px;
     margin: 0 auto 40px;
@@ -334,12 +326,108 @@ body {
     padding: 16px 15px;
     background-color: $white;
     color: $accent;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
+    @extend %roboto-500;
     font-size: 18px;
     line-height: 18px;
     border: 1px solid $white;
     border-radius: 3px;
     text-transform: uppercase;
+}
+
+.services {
+    padding: 25px 0 40px;
+    text-align: center;
+}
+
+.services-top {
+    max-width: 280px;
+    margin: 0 auto 40px;
+}
+
+.title {
+    @extend %roboto-condenced-400;
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+    padding-bottom: 28px;
+    color: $accent;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 8px;
+        background-color: $accent;
+        bottom: 0;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+}
+
+.services-top__title {
+    margin-bottom: 47px;
+}
+
+.services-top__description {
+    @extend %roboto-400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $textMain;
+    margin-bottom: 20px;
+}
+
+.services-top__text {
+    @extend %roboto-400;
+    font-size: 15px;
+    line-height: 17px;
+    color: $textLightGrey;
+}
+
+.services-items__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 310px;
+    border: 1px solid $buttonColor;
+    border-bottom: none; 
+    &:last-child{
+        border-bottom: 1px solid $buttonColor;
+    }
+    &:hover{
+        .services-items__text,
+        .services-items__link {
+            display: block;
+        }
+        .services-items__title {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.services-items__img {
+    margin-bottom: 30px;
+}
+
+.services-items__title {
+    @extend %roboto-condenced-700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    color: $textMain;
+}
+
+.services-items__text {
+    display: none;
+    @extend %dosis-400;
+    font-size: 16px;
+    line-height: 18px;
+    color:$textGrey;
+}
+
+.services-items__link {
+    display: none;
+    @extend %roboto-condenced-700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $accent;
 }

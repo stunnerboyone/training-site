@@ -1,4 +1,46 @@
+@import 'fonts';
+
 $accent: #2B4074;
 $white: #fff;
 $textMain: #4a4a4a;
 $buttonColor: #f9f6e5;
+$textGrey: #9b9b9b;
+$textLightGrey: #797979;
+
+
+%dosis-300 {
+    font-family: 'Dosis-Light';
+    font-weight: 300;
+    font-style: normal;
+}
+
+%dosis-400 {
+    font-family: 'Dosis-Regular';
+    font-weight: 400;
+    font-style: normal;
+}
+
+%roboto-condenced-400 {
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    font-style: normal;
+}
+
+%roboto-condenced-700 {
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-style: normal;
+}
+
+%roboto-400 {
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-style: normal;
+}
+
+%roboto-500 {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+    font-style: normal;
+}
+
